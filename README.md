@@ -204,12 +204,12 @@ using the `dev` target in `dbt_divvy_streaming/profiles.yml`.
 ## Known limitations and roadmap
 
 - [x] Unit tests and GitHub Actions CI
-- [ ] Retention policy for `bronze.station_status` (grows ~6 M rows/day)
-- [ ] Airflow to orchestrate dbt runs and data-quality checks (the `dbt`
+- [x] Retention policy for `bronze.station_status` (grows ~6 M rows/day)
+- [x] Airflow to orchestrate dbt runs and data-quality checks (the `dbt`
       container loops every 60 s as a stopgap)
-- [ ] Network-wide time series (total bikes available per hour) using a
+- [x] Network-wide time series (total bikes available per hour) using a
       carry-forward over silver
-- [ ] Power BI connected to the SQL Server container instead of the local
+- [x] Power BI connected to the SQL Server container instead of the local
       native instance
 - Spark-to-SQL-Server delivery is at-least-once: a retried micro-batch can
   leave duplicate rows in bronze. Silver removes them.
