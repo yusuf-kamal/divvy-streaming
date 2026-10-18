@@ -1,0 +1,24 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets and local config
+.env
+
+# Spark
+checkpoints/
+
+# JDBC Windows-auth DLL (local only)
+drivers/
+
+# dbt
+dbt_divvy_streaming/target/
+dbt_divvy_streaming/logs/
+dbt_divvy_streaming/dbt_packages/
+
+# Personal notes and leftovers
+learning/
+*.old
+logs/
+dbt_divvy_streaming/.user.yml

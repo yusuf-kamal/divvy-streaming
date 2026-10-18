@@ -1,0 +1,15 @@
+api:
+  url: https://api.citybik.es/v2/networks/divvy
+  poll_interval_seconds: 30
+  timeout_seconds: 10
+
+kafka:
+  bootstrap_servers: localhost:9092
+  topic: divvy_stations
+
+sqlserver:
+  host: localhost
+  port: 14330
+  database: Bike_Streaming
+  table: bronze.station_status
+  auth_dll_dir: drivers

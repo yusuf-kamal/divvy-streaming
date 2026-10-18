@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: Bike_Streaming
+    schema: bronze
+    tables:
+      - name: station_status
+        description: "Raw station snapshots loaded by the Spark consumer, one row per station per pull."
+        columns:
+          - name: id
+            data_tests:
+              - not_null
+              - unique
+          - name: station_id
+            data_tests:
+              - not_null
+          - name: ingested_at
+            data_tests:
+              - not_null

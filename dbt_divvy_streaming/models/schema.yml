@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: station_status
+    description: "Cleaned, de-duplicated station updates (one row per station per source update)."
+    columns:
+      - name: bronze_id
+        data_tests: [unique, not_null]
+      - name: station_id
+        data_tests: [not_null]
+      - name: source_timestamp
+        data_tests: [not_null]
+
+  - name: station_latest
+    description: "Latest known state of each station."
+    columns:
+      - name: station_id
+        data_tests: [unique, not_null]
+
+  - name: station_hourly
+    description: "Hourly averages per station, based on observed updates."
+    columns:
+      - name: station_id
+        data_tests: [not_null]
+      - name: hour_start
+        data_tests: [not_null]
