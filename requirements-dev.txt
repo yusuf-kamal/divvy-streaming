@@ -1,0 +1,3 @@
+-r producer/requirements.txt
+-r consumer/requirements.txt
+pytest

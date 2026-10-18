@@ -22,3 +22,5 @@ learning/
 *.old
 logs/
 dbt_divvy_streaming/.user.yml
+
+.pytest_cache/
