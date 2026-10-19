@@ -90,6 +90,7 @@ services:
         /opt/mssql-tools18/bin/sqlcmd -C -S sqlserver -U sa -P "$$SA_PASSWORD" -b -i /sql/init_db.sql
         /opt/mssql-tools18/bin/sqlcmd -C -S sqlserver -U sa -P "$$SA_PASSWORD" -b -v DBT_PASSWORD="$$DBT_PASSWORD" -i /sql/create_dbt_login.sql
         /opt/mssql-tools18/bin/sqlcmd -C -S sqlserver -U sa -P "$$SA_PASSWORD" -b -v BI_PASSWORD="$$BI_PASSWORD" -i /sql/create_bi_login.sql
+        /opt/mssql-tools18/bin/sqlcmd -C -S sqlserver -U sa -P "$$SA_PASSWORD" -b -i /sql/retain_bronze.sql
     restart: "no"
 
   consumer:
